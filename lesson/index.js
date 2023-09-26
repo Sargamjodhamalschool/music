@@ -44,7 +44,20 @@ let joinPageWebcam = document.getElementById("joinCam");
 let meetingCode = "";
 let screenShareOn = false;
 let joinPageVideoStream = null;
+async function requestCameraAndMicrophonePermissions() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: true,
+    });
+  } catch (error) {
+    console.error('Error accessing camera and microphone; try again', error);
+    // Handle any errors that occur during permission request, e.g., show a message to the user.
+  }
+}
 
+// Call the permission request function at the very start
+requestCameraAndMicrophonePermissions();
 async function tokenGeneration() {
   if (TOKEN != "") {
     token = TOKEN;
