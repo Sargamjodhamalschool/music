@@ -10,6 +10,11 @@
     margin: 0;
     background-color: lightblue;
   }
+a:link,a:visited {
+  color: #939ef0;
+  text-decoration:none;
+}
+a:hover{color: #8f00ff;}
   .top-section {
     display: flex;
     align-items: center;
@@ -44,7 +49,7 @@
     background-color: #333;
     padding: 10px 20px;
   }
-
+  .navbar span{color: #939ef0;}
   .n {
     display: flex;
     flex-direction: row;
@@ -133,9 +138,9 @@
       <span class="sub-menu-parent nav-link">
       <span>Courses</span>
         <ul class="sub-menu">
-          <li><a href="courses/beginner.html">Beginner</a></li>
-          <li><a href="courses/intermediate.html">Intermediate</a></li>
-          <li><a href="courses/expert.html">Expert</a></li>
+          <li><a href="courses/beginner.html">Easy</a></li>
+          <li><a href="courses/intermediate.html">Medium</a></li>
+          <li><a href="courses/expert.html">Hard</a></li>
         </ul>
       </span>
       <span class="sub-menu-parent nav-link">
@@ -165,7 +170,7 @@
   <div class="note" onclick="compose('re')">re</div>
   <div class="note" onclick="compose('na')">na</div>
 
-  <h2>My Composition:</h2>
+  <h2>My Composition:</h2><img style="width: 750px; height:450px;float: right;" src='tabla.png'>
   <div id="composition"></div>
 
   <label for="intervalInput">Playback Interval (ms):</label>
@@ -175,6 +180,7 @@
   <button onclick="loop()">Loop</button>
   <button onclick="reset()">Reset</button>
 <p> Sound from ( https://freesound.org/people/msarkar/ )</p>
+<a href="https://www.freepik.com/free-vector/indian-musical-instrument-illustration_7038213.htm#query=tabla&position=0&from_view=search&track=sph">Image by user2104819</a> on Freepik(modified)
 
   <script>
     const compositionDiv = document.getElementById('composition');

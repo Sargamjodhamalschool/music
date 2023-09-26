@@ -1,3 +1,4 @@
+// Constants
 const API_BASE_URL = "https://api.videosdk.live";
 
 // Declaring variables
@@ -603,7 +604,7 @@ function addDomEvents() {
     if (participantId.split("-")[1] == meeting.localParticipant.id) {
       contentRaiseHand.innerHTML = "You Have Raised Your Hand";
     } else {
-      contentRaiseHand.innerHTML = `<b>${remoteParticipantId}</b> Has Raised Their Hand`;
+      contentRaiseHand.innerHTML = `<b>${remoteParticipantId}</b> Have Raised Their Hand`;
     }
 
     $("#contentRaiseHand").show();
